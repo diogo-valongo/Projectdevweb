@@ -6,20 +6,17 @@
 
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Cliente</a>
+    <a class="navbar-brand" href="cliente.jsp">Cliente</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav  me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
+      <ul class="navbar-nav  me-auto mb-2 mb-lg-0">        
         <li class="nav-item">
           <a class="nav-link" href="saldo.jsp">Saldo</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="deposito.jsp">Deposito</a>
+          <a class="nav-link" href="deposito.jsp">Depósito</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="saque.jsp">Saque</a>
@@ -31,7 +28,7 @@
           <a class="nav-link" href="extrato.jsp">Extrato</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="transferencia.jsp">Tranferência</a>
+          <a class="nav-link" href="transferencia.jsp">Transferência</a>
         </li>
       
       </ul>
