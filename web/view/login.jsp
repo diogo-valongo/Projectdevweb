@@ -14,6 +14,7 @@
     </head>
     <body>
         <jsp:include page="menuCliente.jsp"/>
+        <jsp:include page="menuAdministrador.jsp"/>        
         <main class="form-signin w-100 m-auto">
             <div class="mb-3 mx-auto p-2" style="width: 33%;">
         <h1 class="mb-3">Login</h1>
