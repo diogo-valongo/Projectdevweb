@@ -17,6 +17,16 @@
         
         <div class="container mt-3">
         <h1>Extrato</h1>
+        <form>
+            <div class="row mb-3">
+                <label for="mes" class="col-sm-2 col-form-label">Mês</label>
+                <div class="col-sm-10">
+                    <input type="month" class="form-control" id="mes">
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Consultar Extrato</button>
+        </form>
+         <h1 class="mb-5 mt-5">Extrato do mês "nome do Mês":</h1>
         <table class="table table-striped">
             <thead>
                 <tr>

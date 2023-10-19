@@ -14,7 +14,24 @@
     </head>
     <body>
         <jsp:include page="menuAdministrador.jsp"/> 
-        <h1>Cadastro Conta</h1>
+        <div class="container mt-3">
+        <h1>Cadastro de Conta</h1>
+        <form>
+            <div class="row mb-3">
+                <label for="idusuario" class="col-sm-2 col-form-label">Id do Usuário</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="idusuario">
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label for="numeroconta" class="col-sm-2 col-form-label">Numero da Conta</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="numeroconta">
+                </div>
+            </div> 
+            <button type="submit" class="btn btn-primary">Cadastrar conta</button>
+        </form>
+        </div>
         <script src='../bootstrap/bootstrap.min.js'></script>
     </body>
 </html>

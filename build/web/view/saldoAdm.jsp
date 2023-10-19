@@ -14,7 +14,20 @@
     </head>
     <body>
         <jsp:include page="menuAdministrador.jsp"/>
-        <h1>Saldo</h1>
+        <div class="container mt-3">
+        <h1>Consulta Saldo</h1>
+        <form>
+            <div class="row mb-3">
+                <label for="conta" class="col-sm-2 col-form-label">Conta</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="conta">
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Consultar</button>
+        </form>
+        <h1 class="mb-5 mt-5">A conta de "nome Cliente" tem o saldo de:</h1>
+        <h2 class="mb-5 mt-3">R$1000,00</h2> 
+        </div>
         <script src='../bootstrap/bootstrap.min.js'></script>
     </body>
 </html>

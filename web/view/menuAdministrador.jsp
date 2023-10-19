@@ -19,7 +19,7 @@
           <a class="nav-link" href="extratoAdm.jsp">Extrato</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="cadastroUsuario.jsp">Usuario</a>
+          <a class="nav-link" href="cadastroUsuario.jsp">Usuário</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="cadastroConta.jsp">Conta</a>
