@@ -14,7 +14,8 @@
     </head>
     <body>
         <jsp:include page="menuCliente.jsp"/>
-        <h1>Saldo</h1>
+        <h1 class="mb-5 mt-3 ms-5">Olá, "nome Cliente" seu saldo é de:</h1>
+        <h2 class="mb-5 mt-3 ms-5">R$1000,00</h2>        
         <script src='../bootstrap/bootstrap.min.js'></script>
     </body>
 </html>

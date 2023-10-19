@@ -14,7 +14,18 @@
     </head>
     <body>
         <jsp:include page="menuCliente.jsp"/>
+        <div class="container mt-3">
         <h1>Depósito</h1>
+        <form>
+            <div class="row mb-3">
+                <label for="valor" class="col-sm-2 col-form-label">Valor (R$)</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="valor">
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Depositar</button>
+        </form>
+        </div>
         <script src='../bootstrap/bootstrap.min.js'></script>
     </body>
 </html>

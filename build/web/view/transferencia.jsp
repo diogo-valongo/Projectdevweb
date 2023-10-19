@@ -14,7 +14,24 @@
     </head>
     <body>
         <jsp:include page="menuCliente.jsp"/>
+        <div class="container mt-3">
         <h1>Transferência</h1>
+        <form>
+            <div class="row mb-3">
+                <label for="valor" class="col-sm-2 col-form-label">Valor (R$)</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="valor">
+                </div>
+            </div>
+            <div class="row mb-3">
+              <label for="conta" class="col-sm-2 col-form-label">Conta</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" id="conta">
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Transferir</button>
+        </form>
+        </div>
         <script src='../bootstrap/bootstrap.min.js'></script>
     </body>
 </html>
