@@ -29,12 +29,15 @@ public class AdministradorDAO implements Dao<Administrador> {
             sql.setInt(1, id);
             ResultSet resultado = sql.executeQuery();
             if (resultado != null) {
+                resultado.next();
                 administrador.setId(Integer.parseInt(resultado.getString("id")));
                 administrador.setNome(resultado.getString("nome"));   
+                administrador.setSenha(resultado.getString("senha"));
+
             }
         } catch (SQLException ex) {
             Logger.getLogger(AdministradorDAO.class.getName()).log(Level.SEVERE, null, ex);
-            throw new RuntimeException("Falha na query para recuperar administrador");
+            throw new RuntimeException(ex.getMessage());
 
         }
         
@@ -52,9 +55,11 @@ public class AdministradorDAO implements Dao<Administrador> {
             ResultSet resultado = sql.executeQuery();
             if (resultado != null) {
               while (resultado.next()) {
+                  
                   Administrador administrador = new Administrador();
                   administrador.setId(Integer.parseInt(resultado.getString("id")));
                   administrador.setNome(resultado.getString("nome"));
+                  administrador.setSenha(resultado.getString("senha"));
                   administradores.add(administrador);
               }
             }

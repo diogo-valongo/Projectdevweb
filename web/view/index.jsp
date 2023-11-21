@@ -15,7 +15,7 @@
     <body>
         <div class="mt-3 mx-auto" style="width:33%">
             <h1>Bem vindos ao BUFF o Banco da UFF</h1>            
-            <a style="font-size:26px" href="view/login.jsp">Faça seu login aqui</a>                       
+            <a style="font-size:26px" href="view/login.jsp?acao=loginNormal">Faça seu login aqui</a>                       
             
             <script src='bootstrap/bootstrap.min.js'></script>            
         </div>

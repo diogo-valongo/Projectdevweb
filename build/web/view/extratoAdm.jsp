@@ -10,7 +10,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>BUFF - Extrato</title>
-        <link href="../bootstrap/bootstrap.min.css" rel="stylesheet">
+        <link href="bootstrap/bootstrap.min.css" rel="stylesheet">
     </head>
     <body>
         <jsp:include page="menuAdministrador.jsp"/>
@@ -83,6 +83,6 @@
             
         </table>
         </div>
-        <script src='../bootstrap/bootstrap.min.js'></script>
+        <script src="bootstrap/bootstrap.min.js"></script>
     </body>
 </html>

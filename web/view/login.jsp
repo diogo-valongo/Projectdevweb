@@ -29,7 +29,7 @@
                   <button type="submit" class="btn btn-primary">Logar</button>
                 </form>
                 <div class="mt-3">
-                <a href="loginAdm.jsp">Sou admnistrador</a>
+                <a href="loginAdm.jsp?acao=loginAdmin">Sou admnistrador</a>
                 </div>
             </div>
         </main>

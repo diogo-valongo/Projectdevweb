@@ -17,19 +17,19 @@
         <main class="form-signin w-100 m-auto">
             <div class="mb-3 mx-auto p-2" style="width: 33%;">
                 <h1 class="mb-3">Login ADM</h1>
-                <form>  
+                <form action="/Projectdevweb/admin?acao=login" method="POST">  
                   <div class="mb-3">
                     <label for="id" class="form-label">Id do Usuário</label>
-                    <input type="text" class="form-control" id="id">    
+                    <input type="text" class="form-control" id="id" name="id">    
                   </div>
                   <div class="mb-3">
                     <label for="pwd" class="form-label">Senha</label>
-                    <input type="password" class="form-control" id="pwd">
+                    <input type="password" class="form-control" id="pwd" name="password">
                   </div> 
                   <button type="submit" class="btn btn-primary">Logar</button>
                 </form>
                 <div class="mt-3">
-                <a href="login.jsp">Sou usuário normal</a>
+                <a href="login.jsp?acao=loginNormal">Sou usuário normal</a>
                 </div>
             </div>
         </main>
