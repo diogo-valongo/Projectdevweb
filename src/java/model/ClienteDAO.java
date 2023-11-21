@@ -65,22 +65,59 @@ public class ClienteDAO implements Dao<Cliente>{
             throw new RuntimeException(ex.getMessage());
         }
         
-        return clientes;    }
+        return clientes;    
+    }
 
     @Override
     public void insert(Cliente t) {
         Conexao conexao = new Conexao();
-        String query = "INSERT INTO Cliente (nome, senha) VALUES (?, ?);";
+        String query = "INSERT INTO Cliente (nome, senha) VALUES (?, ?)";
+        
+         try {
+            PreparedStatement sql = conexao.getConexao().prepareStatement(query);
+            sql.setString(1, t.getNome());
+            sql.setString(2, t.getSenha());
+            sql.executeQuery();
+            conexao.closeConexao();
+
+        } catch (SQLException ex) {
+            Logger.getLogger(AdministradorDAO.class.getName()).log(Level.SEVERE, null, ex);
+            throw new RuntimeException("Falha na query para criar cliente");
+        }
     }
 
     @Override
     public void update(Cliente t) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+         String query = "UPDATE Cliente SET nome = ? where id = ?";
+        Conexao conexao = new Conexao();
+
+        try {
+            PreparedStatement sql = conexao.getConexao().prepareStatement(query);
+            sql.setString(1, t.getNome());
+            sql.setInt(2, t.getId());
+            sql.executeQuery();
+            conexao.closeConexao();
+
+        } catch (SQLException ex) {
+            Logger.getLogger(AdministradorDAO.class.getName()).log(Level.SEVERE, null, ex);
+            throw new RuntimeException("Falha na query para atualizar cliente");
+
+        }
     }
 
     @Override
     public void delete(int id) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
+ String query = "DELETE FROM Cliente WHERE id = ?";
+        Conexao conexao = new Conexao();
+        try {
+            PreparedStatement sql = conexao.getConexao().prepareStatement(query);
+            sql.setInt(1, id);
+            sql.executeQuery();
+            conexao.closeConexao();
+
+        } catch (SQLException ex) {
+            Logger.getLogger(AdministradorDAO.class.getName()).log(Level.SEVERE, null, ex);
+            throw new RuntimeException("Falha na query para deletar cliente");
+        }    }
     
 }

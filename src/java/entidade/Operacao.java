@@ -21,26 +21,15 @@ enum TipoOperacao {
 public class Operacao {
     private int id;
     private String nome;
-    private TipoOperacao tipo;
+    private int tipoId;
     private double valorEntrada;
     private double valorSaida;
-    private Conta contaEntrada;
-    private Conta contaSaida;
+    private int contaEntradaId;
+    private int contaSaidaId;
     private Date data;
     // Calendar se usa Calendar c = Calendar.getInstance(); para pegar uma intancia de calendario 
     // Será util para usar um Date data = c.getTime(); para pegar a data de hoje
     // DateFormat será util para formatar essa data adiquirida
-  
-    public Operacao(int id, String nome, TipoOperacao tipo, double valorEntrada, double valorSaida, Conta contaEntrada, Conta contaSaida, Date data) {
-        this.id = id;
-        this.nome = nome;
-        this.tipo = tipo;
-        this.valorEntrada = valorEntrada;
-        this.valorSaida = valorSaida;
-        this.contaEntrada = contaEntrada;
-        this.contaSaida = contaSaida;
-        this.data = data;
-    }
     
     // Getters e Setters
     public int getId() {
@@ -59,12 +48,12 @@ public class Operacao {
         this.nome = nome;
     }
 
-    public TipoOperacao getTipo() {
-        return tipo;
+    public int getTipo() {
+        return tipoId;
     }
 
-    public void setTipo(TipoOperacao tipo) {
-        this.tipo = tipo;
+    public void setTipo(int tipo) {
+        this.tipoId = tipo;
     }
 
     public double getValorEntrada() {
@@ -83,20 +72,20 @@ public class Operacao {
         this.valorSaida = valorSaida;
     }
 
-    public Conta getContaEntrada() {
-        return contaEntrada;
+    public int getContaEntrada() {
+        return contaEntradaId;
     }
 
-    public void setContaEntrada(Conta contaEntrada) {
-        this.contaEntrada = contaEntrada;
+    public void setContaEntrada(int contaEntrada) {
+        this.contaEntradaId = contaEntrada;
     }
 
-    public Conta getContaSaida() {
-        return contaSaida;
+    public int getContaSaida() {
+        return contaSaidaId;
     }
 
-    public void setContaSaida(Conta contaSaida) {
-        this.contaSaida = contaSaida;
+    public void setContaSaida(int contaSaida) {
+        this.contaSaidaId = contaSaida;
     }
 
     public Date getData() {

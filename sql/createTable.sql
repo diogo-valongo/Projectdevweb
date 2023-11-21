@@ -10,7 +10,7 @@ INSERT INTO TipoConta (id, nome) VALUES
 
 CREATE TABLE Cliente (
     id INT AUTO_INCREMENT,
-    nome VARCHAR(255) NOT NULL,
+   s nome VARCHAR(255) NOT NULL,
     senha VARCHAR(255) NOT NULL,
     PRIMARY KEY (id)
 );
@@ -18,7 +18,7 @@ CREATE TABLE Cliente (
 CREATE TABLE Conta (
     id INT AUTO_INCREMENT,
     numero INT NOT NULL,
-    tipoContaId INT,
+    tipoContaId,
     saldo DOUBLE,
     clienteId INT,
     FOREIGN KEY (tipoContaId) REFERENCES TipoConta(id),

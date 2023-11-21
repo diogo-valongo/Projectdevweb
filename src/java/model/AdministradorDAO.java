@@ -33,7 +33,6 @@ public class AdministradorDAO implements Dao<Administrador> {
                 administrador.setId(Integer.parseInt(resultado.getString("id")));
                 administrador.setNome(resultado.getString("nome"));   
                 administrador.setSenha(resultado.getString("senha"));
-
             }
         } catch (SQLException ex) {
             Logger.getLogger(AdministradorDAO.class.getName()).log(Level.SEVERE, null, ex);
