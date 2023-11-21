@@ -1,20 +1,20 @@
 CREATE TABLE TipoConta (
-    id INT PRIMARY KEY,
+    id INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(255) NOT NULL
 );
 
-INSERT INTO TipoConta (id, nome) VALUES
-(1, 'CORRENTE'),
-(2, 'POUPANCA');
+INSERT INTO TipoConta (nome) VALUES
+('CORRENTE'),
+('POUPANCA');
 
 CREATE TABLE Cliente (
-    id INT PRIMARY KEY,
+    id INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(255) NOT NULL,
     senha VARCHAR(255) NOT NULL
 );
 
 CREATE TABLE Conta (
-    id INT PRIMARY KEY,
+    id INT AUTO_INCREMENT PRIMARY KEY,
     numero INT NOT NULL,
     tipoContaId INT,
     saldo DOUBLE,
@@ -24,18 +24,18 @@ CREATE TABLE Conta (
 );
 
 CREATE TABLE TipoOperacao (
-    id INT PRIMARY KEY,
+    id INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(255) NOT NULL
 );
 
-INSERT INTO TipoOperacao (id, nome) VALUES
-(1, 'SAQUE'),
-(2, 'DEPOSITO'),
-(3, 'TRANSFERENCIA'),
-(4, 'INVESTIMENTO');
+INSERT INTO TipoOperacao (nome) VALUES
+('SAQUE'),
+('DEPOSITO'),
+('TRANSFERENCIA'),
+('INVESTIMENTO');
 
 CREATE TABLE Operacao (
-    id INT PRIMARY KEY,
+    id INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(255) NOT NULL,
     tipoOperacaoId INT,
     valorEntrada DOUBLE,
@@ -49,7 +49,7 @@ CREATE TABLE Operacao (
 );
 
 CREATE TABLE Administrador (
-    id INT PRIMARY KEY,
+    id INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(255) NOT NULL,
     senha VARCHAR(255) NOT NULL
 );
