@@ -15,13 +15,6 @@ public class Cliente {
     private String nome;
     private String senha;
     private List<Conta> contas;
-
-    public Cliente(int id, String nome, String senha, List<Conta> contas) {
-        this.id = id;
-        this.nome = nome;
-        this.senha = senha;
-        this.contas = contas;
-    }
     
     // Getters e Setters
     public int getId() {
