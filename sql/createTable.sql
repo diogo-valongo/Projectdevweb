@@ -1,6 +1,7 @@
 CREATE TABLE TipoConta (
-    id INT PRIMARY KEY,
-    nome VARCHAR(255) NOT NULL
+    id INT AUTO_INCREMENT,
+    nome VARCHAR(255) NOT NULL,
+    PRIMARY KEY (id)
 );
 
 INSERT INTO TipoConta (id, nome) VALUES
@@ -8,9 +9,10 @@ INSERT INTO TipoConta (id, nome) VALUES
 (2, 'POUPANCA');
 
 CREATE TABLE Cliente (
-    id INT PRIMARY KEY,
+    id INT AUTO_INCREMENT,
     nome VARCHAR(255) NOT NULL,
-    senha VARCHAR(255) NOT NULL
+    senha VARCHAR(255) NOT NULL,
+    PRIMARY KEY (id)
 );
 
 CREATE TABLE Conta (
