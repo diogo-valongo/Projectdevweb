@@ -8,12 +8,10 @@ import entidade.Operacao;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.Date;
-import java.sql.;
 /**
  *
  * @author matmr
@@ -90,7 +88,7 @@ public class OperacaoDAO implements Dao<Operacao> {
             sql.setInt(5, t.getContaEntrada());
             sql.setInt(6, t.getContaSaida());
             sql.setDate(7, new java.sql.Date(t.getData().getTime()));
-          
+    
             sql.executeQuery();
          } catch (SQLException ex) {
             Logger.getLogger(AdministradorDAO.class.getName()).log(Level.SEVERE, null, ex);
