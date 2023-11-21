@@ -40,6 +40,8 @@ public class ContaDAO implements Dao<Conta>{
         }  catch (SQLException ex) {
             Logger.getLogger(AdministradorDAO.class.getName()).log(Level.SEVERE, null, ex);
             throw new RuntimeException(ex.getMessage());
+        } finally {
+            conexao.closeConexao();
         }
          return conta;
     }
@@ -66,6 +68,8 @@ public class ContaDAO implements Dao<Conta>{
         }  catch (SQLException ex) {
             Logger.getLogger(AdministradorDAO.class.getName()).log(Level.SEVERE, null, ex);
             throw new RuntimeException(ex.getMessage());
+        } finally {
+            conexao.closeConexao();
         }
         
         return contas;   
@@ -88,6 +92,8 @@ public class ContaDAO implements Dao<Conta>{
         } catch (SQLException ex) {
             Logger.getLogger(AdministradorDAO.class.getName()).log(Level.SEVERE, null, ex);
             throw new RuntimeException("Falha na query para criar conta");
+        } finally {
+            conexao.closeConexao();
         }
     }
 
@@ -110,6 +116,8 @@ public class ContaDAO implements Dao<Conta>{
         } catch (SQLException ex) {
             Logger.getLogger(AdministradorDAO.class.getName()).log(Level.SEVERE, null, ex);
             throw new RuntimeException("Falha na query para criar cliente");
+        }  finally {
+            conexao.closeConexao();
         }
          
     }
@@ -126,6 +134,8 @@ public class ContaDAO implements Dao<Conta>{
         } catch (SQLException ex) {
             Logger.getLogger(AdministradorDAO.class.getName()).log(Level.SEVERE, null, ex);
             throw new RuntimeException("Falha na query para criar cliente");
+        }  finally {
+            conexao.closeConexao();
         }
     }
     

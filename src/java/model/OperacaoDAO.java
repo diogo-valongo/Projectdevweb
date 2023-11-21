@@ -42,6 +42,8 @@ public class OperacaoDAO implements Dao<Operacao> {
         }  catch (SQLException ex) {
             Logger.getLogger(AdministradorDAO.class.getName()).log(Level.SEVERE, null, ex);
             throw new RuntimeException(ex.getMessage());
+        } finally {
+            conexao.closeConexao();
         }
          return operacao;
     }
@@ -70,8 +72,11 @@ public class OperacaoDAO implements Dao<Operacao> {
         }  catch (SQLException ex) {
             Logger.getLogger(AdministradorDAO.class.getName()).log(Level.SEVERE, null, ex);
             throw new RuntimeException(ex.getMessage());
+        } finally {
+            conexao.closeConexao();
         }
-         return operacoes;
+        
+        return operacoes;
     }
 
     @Override
@@ -93,6 +98,8 @@ public class OperacaoDAO implements Dao<Operacao> {
          } catch (SQLException ex) {
             Logger.getLogger(AdministradorDAO.class.getName()).log(Level.SEVERE, null, ex);
             throw new RuntimeException(ex.getMessage());
+        } finally {
+            conexao.closeConexao();
         }
     }
 

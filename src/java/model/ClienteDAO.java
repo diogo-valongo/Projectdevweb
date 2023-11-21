@@ -38,6 +38,8 @@ public class ClienteDAO implements Dao<Cliente>{
         }  catch (SQLException ex) {
             Logger.getLogger(AdministradorDAO.class.getName()).log(Level.SEVERE, null, ex);
             throw new RuntimeException(ex.getMessage());
+        } finally {
+            conexao.closeConexao();
         }
         
         return cliente;
@@ -63,6 +65,8 @@ public class ClienteDAO implements Dao<Cliente>{
         }  catch (SQLException ex) {
             Logger.getLogger(AdministradorDAO.class.getName()).log(Level.SEVERE, null, ex);
             throw new RuntimeException(ex.getMessage());
+        } finally {
+            conexao.closeConexao();
         }
         
         return clientes;    
@@ -78,11 +82,12 @@ public class ClienteDAO implements Dao<Cliente>{
             sql.setString(1, t.getNome());
             sql.setString(2, t.getSenha());
             sql.executeQuery();
-            conexao.closeConexao();
 
         } catch (SQLException ex) {
             Logger.getLogger(AdministradorDAO.class.getName()).log(Level.SEVERE, null, ex);
             throw new RuntimeException("Falha na query para criar cliente");
+        } finally {
+            conexao.closeConexao();
         }
     }
 
@@ -96,12 +101,13 @@ public class ClienteDAO implements Dao<Cliente>{
             sql.setString(1, t.getNome());
             sql.setInt(2, t.getId());
             sql.executeQuery();
-            conexao.closeConexao();
 
         } catch (SQLException ex) {
             Logger.getLogger(AdministradorDAO.class.getName()).log(Level.SEVERE, null, ex);
             throw new RuntimeException("Falha na query para atualizar cliente");
 
+        } finally {
+            conexao.closeConexao();
         }
     }
 
@@ -118,6 +124,9 @@ public class ClienteDAO implements Dao<Cliente>{
         } catch (SQLException ex) {
             Logger.getLogger(AdministradorDAO.class.getName()).log(Level.SEVERE, null, ex);
             throw new RuntimeException("Falha na query para deletar cliente");
-        }    }
+        } finally {
+            conexao.closeConexao();
+        }
+    }
     
 }

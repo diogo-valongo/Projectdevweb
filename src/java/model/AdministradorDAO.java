@@ -38,6 +38,8 @@ public class AdministradorDAO implements Dao<Administrador> {
             Logger.getLogger(AdministradorDAO.class.getName()).log(Level.SEVERE, null, ex);
             throw new RuntimeException(ex.getMessage());
 
+        } finally {
+            conexao.closeConexao();
         }
         
         return administrador;
@@ -62,10 +64,11 @@ public class AdministradorDAO implements Dao<Administrador> {
                   administradores.add(administrador);
               }
             }
-            conexao.closeConexao();
         } catch (SQLException ex) {
             Logger.getLogger(AdministradorDAO.class.getName()).log(Level.SEVERE, null, ex);
             throw new RuntimeException("Falha na query para listar administradores");
+        } finally {
+            conexao.closeConexao();
         }
         
         return administradores;
@@ -81,12 +84,13 @@ public class AdministradorDAO implements Dao<Administrador> {
             sql.setString(1, t.getNome());
             sql.setString(2, t.getSenha());
             sql.executeQuery();
-            conexao.closeConexao();
 
         } catch (SQLException ex) {
             Logger.getLogger(AdministradorDAO.class.getName()).log(Level.SEVERE, null, ex);
             throw new RuntimeException("Falha na query para criar administrador");
 
+        } finally {
+            conexao.closeConexao();
         }
     }
 
@@ -100,12 +104,13 @@ public class AdministradorDAO implements Dao<Administrador> {
             sql.setString(1, t.getNome());
             sql.setInt(2, t.getId());
             sql.executeQuery();
-            conexao.closeConexao();
 
         } catch (SQLException ex) {
             Logger.getLogger(AdministradorDAO.class.getName()).log(Level.SEVERE, null, ex);
             throw new RuntimeException("Falha na query para atualizar administrador");
 
+        } finally {
+            conexao.closeConexao();
         }
     }
 
@@ -117,11 +122,12 @@ public class AdministradorDAO implements Dao<Administrador> {
             PreparedStatement sql = conexao.getConexao().prepareStatement(query);
             sql.setInt(1, id);
             sql.executeQuery();
-            conexao.closeConexao();
 
         } catch (SQLException ex) {
             Logger.getLogger(AdministradorDAO.class.getName()).log(Level.SEVERE, null, ex);
             throw new RuntimeException("Falha na query para deletar administrador");
+        } finally {
+            conexao.closeConexao();
         }
     }
     
