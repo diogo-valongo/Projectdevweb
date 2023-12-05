@@ -13,6 +13,7 @@ enum TipoConta {
     CORRENTE,
     POUPANCA
 }
+
 public class Conta {
     private int id;
     private int numero;    

@@ -10,7 +10,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>BUFF - Extrato</title>
-        <link href="bootstrap/bootstrap.min.css" rel="stylesheet">
+        <link href="../bootstrap/bootstrap.min.css" rel="stylesheet">
     </head>
     <body>
         <jsp:include page="menuAdministrador.jsp"/>
@@ -31,7 +31,7 @@
             </div>
             <button type="submit" class="btn btn-primary">Consultar Extrato</button>
         </form>
-        <h1 class="mb-5 mt-5">A conta de "nome Cliente" tem o Extrato:</h1>
+        <h1 class="mb-5 mt-5">A conta de ${nome} tem o Extrato:</h1>
         
         <table class="table table-striped">
             <thead>
