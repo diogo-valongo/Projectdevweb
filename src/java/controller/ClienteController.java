@@ -84,6 +84,7 @@ public class ClienteController extends HttpServlet {
                         
                         HttpSession sessao = request.getSession();
                         sessao.setAttribute("client_id", id);
+                        sessao.setAttribute("type", "cliente");
                        
                         response.sendRedirect("/Projectdevweb/cliente?acao=saldo");
                         return;
